@@ -1,7 +1,13 @@
 package com.bilgeadam.repository.entity;
 
-public class Futbolcu {
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class Futbolcu {
     private Long id;
     private String isim;
     private String mevki;
@@ -10,27 +16,6 @@ public class Futbolcu {
     private  Long takimId;
 
 
-    public Futbolcu(Long id, String isim, String mevki, int formaNo, Long deger, Long takimId) {
-        this.id = id;
-        this.isim = isim;
-        this.mevki = mevki;
-        this.formaNo = formaNo;
-        this.deger = deger;
-        this.takimId = takimId;
-    }
-    public Futbolcu( String isim, String mevki, int formaNo, Long deger, Long takimId) {
-        this.isim = isim;
-        this.mevki = mevki;
-        this.formaNo = formaNo;
-        this.deger = deger;
-        this.takimId = takimId;
-    }
-    public Futbolcu(String isim, String mevki, int formaNo, Long deger) {
-        this.isim = isim;
-        this.mevki = mevki;
-        this.formaNo = formaNo;
-        this.deger = deger;
-    }
 
 
     public Long getId() {
